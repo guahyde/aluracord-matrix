@@ -25,16 +25,16 @@ function Titulo(props) {
 //     return (
 //         <div>
 //             <GlobalStyle />
-//             <Titulo tag="h2">Boas vindas de volta!</Titulo>
-//             <h2>Discord - Alura Matrix</h2>
+//             <Titulo tag="h2">hydecord mané</Titulo>
+//             <h2>isso ai</h2>
 //         </div>
 //     )
 // }
 // export default HomePage
 
 export default function PaginaInicial() {
-  // const username = 'omariosouto';
-  const [username, setUsername] = React.useState('omariosouto');
+  // const username = 'hyde';
+  const [username, setUsername] = React.useState('hyde');
   const roteamento = useRouter();
 
   return (

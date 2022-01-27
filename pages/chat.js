@@ -20,7 +20,7 @@ export default function ChatPage() {
     function handleNovaMensagem(novaMensagem) {
         const mensagem = {
             id: listaDeMensagens.length + 1,
-            de: 'vanessametonini',
+            de: 'guahyde',
             texto: novaMensagem,
         };
 
@@ -36,7 +36,7 @@ export default function ChatPage() {
             styleSheet={{
                 display: 'flex', alignItems: 'center', justifyContent: 'center',
                 backgroundColor: appConfig.theme.colors.primary[500],
-                backgroundImage: `url(https://virtualbackgrounds.site/wp-content/uploads/2020/08/the-matrix-digital-rain.jpg)`,
+                backgroundImage: `url(https://virtualbackgrounds.site/wp-content/uploads/2020/12/amazon-rainforest.jpg)`,
                 backgroundRepeat: 'no-repeat', backgroundSize: 'cover', backgroundBlendMode: 'multiply',
                 color: appConfig.theme.colors.neutrals['000']
             }}
@@ -174,7 +174,7 @@ function MessageList(props) {
                                     display: 'inline-block',
                                     marginRight: '8px',
                                 }}
-                                src={`https://github.com/vanessametonini.png`}
+                                src={`https://github.com/guahyde.png`}
                             />
                             <Text tag="strong">
                                 {mensagem.de}

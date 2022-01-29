@@ -10,7 +10,6 @@ const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoiYW5v
 const SUPABASE_URL = 'https://tuysyafidqczxlgccxrg.supabase.co';
 const supabaseClient = createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
 
-
 function escutaMensagensEmTempoReal(adicionaMensagem) {
   return supabaseClient
     .from('mensagens')
@@ -19,7 +18,6 @@ function escutaMensagensEmTempoReal(adicionaMensagem) {
     })
     .subscribe();
 }
-
 
 export default function ChatPage() {
   const roteamento = useRouter();
@@ -36,7 +34,6 @@ export default function ChatPage() {
         //console.log('Dados da consulta:', data);
         setListaDeMensagens(data);
       });
-    
     
         const subscription = escutaMensagensEmTempoReal((novaMensagem) => {
       console.log('Nova mensagem:', novaMensagem);
@@ -60,7 +57,6 @@ export default function ChatPage() {
     return () => {
       subscription.unsubscribe();
     }
-    
   }, []);
 
   function handleNovaMensagem(novaMensagem) {
@@ -83,7 +79,6 @@ export default function ChatPage() {
 
     setMensagem('');
   }
-
   return (
     <Box
       styleSheet={{
@@ -161,7 +156,6 @@ export default function ChatPage() {
                 color: appConfig.theme.colors.neutrals[200],
               }}
             />
-
             {/* CallBack */}
             <ButtonSendSticker
               onStickerClick={(sticker) => {
@@ -169,7 +163,6 @@ export default function ChatPage() {
                 handleNovaMensagem(':sticker: ' + sticker);
               }}
             />
-
           </Box>
         </Box>
       </Box>
@@ -266,7 +259,6 @@ function MessageList(props) {
                         else 
                            mensagem.texto */}
             {/* {mensagem.texto} */}
-            
           </Text>
         );
       })}
